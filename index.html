@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5eddd">
+    <meta name="description" content="A cozy, keyword-powered reply desk for the Ascendance of a Bookworm Wiki.">
+    <title>Library Schumil Reply Bot</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Library Schumil Reply Bot home">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>Royal Academy <span class="brand-divider">/</span> Reply Desk</span>
+        </a>
+        <a class="wiki-link" href="https://ascendance-of-a-bookworm.fandom.com/wiki/Ascendance_of_a_Bookworm_Wiki" target="_blank" rel="noreferrer">
+          Visit the wiki <span aria-hidden="true">↗</span>
+        </a>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="eyebrow"><span class="eyebrow-line"></span> THE LIBRARY IS OPEN <span class="eyebrow-line"></span></div>
+          <h1 id="page-title">A little help,<br><span>between the pages.</span></h1>
+          <p class="hero-copy">Ask the Schumil a question. It knows a few things by heart—and always answers with good manners.</p>
+          <div class="hero-decoration" aria-hidden="true">
+            <span class="decoration-star">✧</span>
+            <span class="decoration-book">▤</span>
+            <span class="decoration-star">✦</span>
+          </div>
+        </section>
+
+        <section class="desk" aria-label="Try the reply bot">
+          <div class="desk-heading">
+            <div>
+              <span class="section-kicker">A CONVERSATION</span>
+              <h2>Ask the reply desk</h2>
+            </div>
+            <span class="availability"><span></span> Ready to help</span>
+          </div>
+
+          <div class="chat-window" id="conversation" aria-live="polite" aria-relevant="additions text">
+            <div class="message bot-message">
+              <span class="avatar" aria-hidden="true">S</span>
+              <div class="message-content">
+                <span class="speaker">THE SCHUMIL</span>
+                <p>Welcome, dear reader. What can I help you find in the library today?</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="composer" id="message-form">
+            <label class="sr-only" for="message-input">Your message</label>
+            <input id="message-input" name="message" type="text" maxlength="240" autocomplete="off" placeholder="Ask about books, the wiki, or a shumil…" required>
+            <button type="submit">Send <span aria-hidden="true">➜</span></button>
+          </form>
+          <div class="composer-note"><span>✧</span> Replies are matched from a small, hand-written collection. No LLM, just a well-read little rabbit.</div>
+        </section>
+
+        <section class="prompt-section" aria-labelledby="prompts-title">
+          <div class="prompt-heading">
+            <h2 id="prompts-title">Try asking about</h2>
+            <span>CHOOSE A TOPIC</span>
+          </div>
+          <div class="prompt-list">
+            <button class="prompt-chip" type="button" data-prompt="Can you recommend a book from the library?"><span aria-hidden="true">▤</span> Books &amp; library</button>
+            <button class="prompt-chip" type="button" data-prompt="What is a shumil?"><span aria-hidden="true">✧</span> Shumils</button>
+            <button class="prompt-chip" type="button" data-prompt="Can you help me find a page on the wiki?"><span aria-hidden="true">⌕</span> Finding a page</button>
+            <button class="prompt-chip" type="button" data-prompt="Where can I learn about the temple?"><span aria-hidden="true">♧</span> The temple</button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Made for curious readers <span aria-hidden="true">✦</span></span>
+        <span class="footer-links">
+          <a href="https://ascendance-of-a-bookworm.fandom.com/api.php" target="_blank" rel="noreferrer">Wiki API</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://www.mediawiki.org/wiki/API:Main_page" target="_blank" rel="noreferrer">MediaWiki API docs</a>
+        </span>
+      </footer>
+    </div>
+  </body>
+</html>
